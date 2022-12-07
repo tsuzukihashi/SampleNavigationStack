@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "christmas_tree.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
