@@ -1,35 +1,35 @@
 import SwiftUI
 
-struct ContentView: View {
+struct RootView: View {
     @EnvironmentObject var appEnvironment: AppEnvironment
 
     var body: some View {
-        TabView(selection: appEnvironment.handler) {
+        TabView(selection: appEnvironment.tabSelection) {
             HomeView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-                .tag(SelectedTab.home)
+                .tag(SampleTab.home)
             SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
-                .tag(SelectedTab.search)
+                .tag(SampleTab.search)
             MyPageView()
                 .tabItem {
                     Image(systemName: "person")
                     Text("MyPage")
                 }
-                .tag(SelectedTab.mypage)
+                .tag(SampleTab.mypage)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
     }
 }
 

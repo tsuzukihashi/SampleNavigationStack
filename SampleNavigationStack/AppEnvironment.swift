@@ -5,9 +5,9 @@ class AppEnvironment: ObservableObject {
     @Published var searchPath: [Route] = []
     @Published var myPagePath: [Route] = []
 
-    @Published var selectedTab: SelectedTab = .home
+    @Published var selectedTab: SampleTab = .home
 
-    var handler: Binding<SelectedTab> {
+    var tabSelection: Binding<SampleTab> {
         Binding { [weak self] in
             self?.selectedTab ?? .home
         } set: { [weak self] newValue in
@@ -15,7 +15,7 @@ class AppEnvironment: ObservableObject {
         }
     }
 
-    func popTo(route: Route) {
+    func pop(to route: Route) {
         switch selectedTab {
         case .home:
             homePath.removeAll(where: { $0 == route })

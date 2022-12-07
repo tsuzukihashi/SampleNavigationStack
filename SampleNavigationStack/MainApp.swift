@@ -6,7 +6,7 @@ struct MainApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .environmentObject(appEnvironment)
         }
     }

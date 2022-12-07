@@ -6,7 +6,7 @@ enum Route: Hashable, Equatable {
     case web(url: URL)
 }
 
-enum SelectedTab: Hashable {
+enum SampleTab: Hashable {
     case home
     case search
     case mypage

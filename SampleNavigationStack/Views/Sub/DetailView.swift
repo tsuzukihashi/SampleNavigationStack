@@ -11,7 +11,7 @@ struct DetailView: View {
             Text(appEnvironment.selectedTab.title + "からの遷移")
 
             Button {
-                appEnvironment.popTo(route: .detail)
+                appEnvironment.pop(to: .detail)
             } label: {
                 Text("pop")
             }
