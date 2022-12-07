@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct UserView: View {
+    @EnvironmentObject var appEnvironment: AppEnvironment
+
     let id: String
 
     var body: some View {

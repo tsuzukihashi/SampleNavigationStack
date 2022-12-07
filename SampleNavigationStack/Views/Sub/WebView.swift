@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct WebView: View {
+    @EnvironmentObject var appEnvironment: AppEnvironment
+
     let url: URL
 
     var body: some View {
